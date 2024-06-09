@@ -1,0 +1,98 @@
+@use 'base1' as theme-1;
+@use 'base2' as theme-2;
+
+body {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 12px;
+}
+
+h1 {
+	margin: 0;
+}
+
+main {
+	width: 50vw;
+	display: flex;
+	justify-content: space-around;
+}
+
+.theme-container {
+	display: flex;
+	width: 150px;
+	flex-direction: column;
+	text-align: center;
+	gap: 12px;
+
+	.box {
+		padding: 24px 16px;
+		border: 1px solid #ccc;
+		font-weight: bold;
+	}
+}
+
+.theme-1 {
+
+	.base {
+		background-color: theme-1.$primary-color;
+	}
+
+	.important {
+		background-color: theme-1.$important-color;
+		color: white;
+	}
+
+	.warning {
+		background-color: theme-1.$warning-color;
+	}
+
+	.principal-font {
+		font-family: theme-1.$principal-font;
+	}
+
+	.secondary-font {
+		font-family: theme-1.$secondary-font;
+	}
+
+	.shadow {
+		box-shadow: theme-1.$shadow;
+	}
+}
+
+.theme-2 {
+
+	.box {
+		border-radius: 5px;
+	}
+
+	.base {
+		background-color: theme-2.$primary-color;
+	}
+
+	.important {
+		background-color: theme-2.$important-color;
+		color: white;
+	}
+
+	.warning {
+		background-color: theme-2.$warning-color;
+	}
+
+	.principal-font {
+		font-family: theme-2.$principal-font;
+	}
+
+	.secondary-font {
+		font-family: theme-2.$secondary-font;
+	}
+
+	.shadow {
+		box-shadow: theme-2.$shadow;
+	}
+}

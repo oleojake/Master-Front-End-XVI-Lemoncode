@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eeeeee;
+}
+
+.card {
+  display: grid;
+  grid-template-areas: "image" "content" "button";
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.card img {
+  grid-area: "image";
+  width: 100%;
+}
+.card .card-content {
+  grid-area: "content";
+  padding: 16px;
+}
+.card .card-content h2 {
+  margin: 8px 0 24px;
+  font-weight: 400;
+  font-size: 24px;
+}
+.card .card-content p {
+  margin: 24px 0;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.card .card-content .date {
+  text-align: right;
+  color: black;
+  font-weight: 500;
+}
+.card .card-content .date .today {
+  color: #98cd6a;
+}
+.card .card-button {
+  grid-area: "button";
+  border: none;
+  background-color: #98cd6a;
+  color: white;
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+}
+
+/*# sourceMappingURL=mystyle.css.map */

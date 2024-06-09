@@ -1,0 +1,153 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+h1 {
+  margin: 0;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 32px 8px;
+  border-radius: 5px;
+}
+
+.container-1 {
+  display: flex;
+  gap: 12px;
+}
+.container-1 .base-color {
+  padding: 32px 32px;
+  color: white;
+  background-color: #D82D2D;
+}
+.container-1 .lighten-1 {
+  background-color: #dc4343;
+  color: #1a1a1a;
+}
+.container-1 .darken-1 {
+  background-color: #c72525;
+  color: #cfcfcf;
+}
+.container-1 .lighten-2 {
+  background-color: #e05858;
+  color: black;
+}
+.container-1 .darken-2 {
+  background-color: #b12121;
+  color: #e8e8e8;
+}
+.container-1 .lighten-3 {
+  background-color: #e46e6e;
+  color: black;
+}
+.container-1 .darken-3 {
+  background-color: #9c1d1d;
+  color: white;
+}
+.container-1 .lighten-4 {
+  background-color: #e88383;
+  color: black;
+}
+.container-1 .darken-4 {
+  background-color: #861919;
+  color: white;
+}
+
+.container-2 {
+  display: flex;
+  gap: 12px;
+}
+.container-2 .base-color {
+  padding: 32px 32px;
+  color: white;
+  background-color: #4848E1;
+}
+.container-2 .lighten-1 {
+  background-color: #5e5ee5;
+  color: #1a1a1a;
+}
+.container-2 .darken-1 {
+  background-color: #3232dd;
+  color: #cfcfcf;
+}
+.container-2 .lighten-2 {
+  background-color: #7474e8;
+  color: black;
+}
+.container-2 .darken-2 {
+  background-color: #2323d3;
+  color: #e8e8e8;
+}
+.container-2 .lighten-3 {
+  background-color: #8a8aec;
+  color: black;
+}
+.container-2 .darken-3 {
+  background-color: #1f1fbd;
+  color: white;
+}
+.container-2 .lighten-4 {
+  background-color: #a0a0ef;
+  color: black;
+}
+.container-2 .darken-4 {
+  background-color: #1b1ba8;
+  color: white;
+}
+
+.container-3 {
+  display: flex;
+  gap: 12px;
+}
+.container-3 .base-color {
+  padding: 32px 32px;
+  color: white;
+  background-color: #369B36;
+}
+.container-3 .lighten-1 {
+  background-color: #3dae3d;
+  color: #1a1a1a;
+}
+.container-3 .darken-1 {
+  background-color: #2f882f;
+  color: #cfcfcf;
+}
+.container-3 .lighten-2 {
+  background-color: #46be46;
+  color: black;
+}
+.container-3 .darken-2 {
+  background-color: #297529;
+  color: #e8e8e8;
+}
+.container-3 .lighten-3 {
+  background-color: #59c559;
+  color: black;
+}
+.container-3 .darken-3 {
+  background-color: #226222;
+  color: white;
+}
+.container-3 .lighten-4 {
+  background-color: #6bcc6b;
+  color: black;
+}
+.container-3 .darken-4 {
+  background-color: #1c4f1c;
+  color: white;
+}
+
+/*# sourceMappingURL=mystyle.css.map */
