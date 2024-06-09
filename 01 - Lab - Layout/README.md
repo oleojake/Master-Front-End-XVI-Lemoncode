@@ -11,6 +11,8 @@ Por defecto en el puerto ``http://localhost:3000/`` podremos acceder a los difer
 - Ejercicio 3: http://localhost:3000/src/03/index.html
 - Ejercicio 4: http://localhost:3000/src/04/index.html
 
+Si se desean modificar los ficheros .scss tenemos que ejecutar el comando ``sass -w sass:css`` para que se actualicen los cambios en los ficheros .css de cada ejercicios.
+
 ## Algunas capturas de pantalla
 ### Ejercicio 1: Crear una paleta de colores dinámica.
 ![Screen Ejercicio 01](src/public/readme/01.JPG)
