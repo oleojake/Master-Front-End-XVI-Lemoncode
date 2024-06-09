@@ -15,17 +15,18 @@ body {
 
 .card {
   display: grid;
+  grid-template-columns: 1fr;
   grid-template-areas: "image" "content" "button";
   width: 300px;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .card img {
-  grid-area: "image";
+  grid-area: image;
   width: 100%;
 }
 .card .card-content {
-  grid-area: "content";
+  grid-area: content;
   padding: 16px;
 }
 .card .card-content h2 {
@@ -48,7 +49,7 @@ body {
   color: #98cd6a;
 }
 .card .card-button {
-  grid-area: "button";
+  grid-area: button;
   border: none;
   background-color: #98cd6a;
   color: white;

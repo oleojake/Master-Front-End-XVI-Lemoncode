@@ -15,6 +15,7 @@ body {
 
 .card {
 	display: grid;
+	grid-template-columns: 1fr;
 	grid-template-areas:
 		"image"
 		"content"
@@ -24,12 +25,12 @@ body {
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
 	img {
-		grid-area: "image";
+		grid-area: image;
 		width: 100%;
 	}
 
 	.card-content {
-		grid-area: "content";
+		grid-area: content;
 		padding: 16px;
 
 		h2 {
@@ -57,7 +58,7 @@ body {
 	}
 
 	.card-button {
-		grid-area: "button";
+		grid-area: button;
 		border: none;
 		background-color: #98cd6a;
 		color: white;
