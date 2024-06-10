@@ -1,0 +1,156 @@
+@use 'base' as *;
+
+body {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: 1fr 6fr;
+	grid-template-areas:
+		"header header"
+		"nav main"
+		"footer footer";
+
+	@media (width < 768px) {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+header {
+	grid-area: header;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+
+	.toolbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 8px;
+
+		@media (width < 768px) {
+			display: none;
+		}
+	}
+
+	.page-title {
+		font-size: 24px;
+		color: white;
+		background-color: $page-title-color;
+		padding: 16px;
+	}
+}
+
+
+nav {
+	grid-area: nav;
+	background-color: $nav-bg-color;
+	color: white;
+	padding-bottom: 16px;
+
+	@media (width < 768px) {
+		padding-bottom: 0px;
+		position: sticky;
+		top: 0;
+	}
+
+	.menu-container {
+		position: sticky;
+		top: 0;
+
+		.menu-title {
+			font-size: 20px;
+			color: white;
+			padding: 8px;
+			font-weight: bold;
+			text-transform: uppercase;
+			text-align: center;
+
+			@media (width < 768px) {
+				display: none;
+			}
+		}
+
+		ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+
+			@media (width < 768px) {
+				display: flex;
+				justify-content: center;
+				text-align: center;
+				padding: 8px;
+				gap: 8px;
+			}
+
+			li {
+				padding: 8px;
+				color: black;
+				background-color: #F9FBE3;
+				border: 1px solid $nav-bg-color;
+				cursor: pointer;
+
+				@media (width < 768px) {
+					flex-grow: 1;
+				}
+
+				&:hover {
+					background-color: $page-title-color;
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+main {
+	grid-area: main;
+	background-color: $main-bg-color;
+	padding: 16px;
+
+	.list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		grid-gap: 32px;
+
+		@media (width < 768px) {
+			flex-direction: column;
+			align-items: stretch;
+			gap: 4px;
+		}
+
+		.card {
+			width: 200px;
+			background-color: white;
+			padding: 20px;
+			text-align: center;
+			border-radius: 4px;
+			border: 1px solid black;
+			box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+			transition: box-shadow 0.3s;
+
+			@media (width < 768px) {
+				width: auto;
+				border: none;
+				border-radius: 0px;
+			}
+
+			&:hover {
+				box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+			}
+
+			img {
+				border-radius: 50%;
+			}
+		}
+	}
+}
+
+footer {
+	grid-area: footer;
+	background-color: $footer-bg-color;
+	padding: 16px;
+}
