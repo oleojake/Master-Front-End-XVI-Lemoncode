@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #141414;
+  color: white;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  position: sticky;
+  top: 0;
+  background-color: #141414;
+  padding: 8px;
+}
+header .header-logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  gap: 16px;
+}
+@media (width < 1280px) {
+  header .header-logo .platform-title {
+    display: none;
+  }
+}
+header .header-logo img {
+  width: 100px;
+}
+header .header-buttons {
+  display: flex;
+  gap: 16px;
+  padding: 4px;
+}
+header .header-buttons div {
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+header .header-buttons div:hover {
+  background-color: white;
+  color: #141414;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+main .section-title #top-text::before {
+  font-weight: bold;
+  content: "5";
+}
+@media (width < 1280px) {
+  main .section-title #top-text::before {
+    content: "3";
+  }
+}
+@media (width < 1280px) {
+  main .section-title {
+    font-size: 24px;
+  }
+}
+main section {
+  margin-bottom: 40px;
+}
+main .top {
+  display: flex;
+  justify-content: center;
+}
+main .top .top-item {
+  cursor: pointer;
+  min-width: 225px;
+}
+main .top .top-item img {
+  width: 100%;
+}
+@media (width < 1280px) {
+  main .top div:nth-child(4),
+  main .top div:nth-child(5) {
+    display: none;
+  }
+}
+@media (width < 576px) {
+  main .top {
+    flex-direction: column;
+  }
+}
+main .first {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+main .first .item {
+  cursor: pointer;
+  min-width: 250px;
+  flex-grow: 1;
+}
+main .first .item img {
+  width: 100%;
+}
+main .first .item img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.5);
+  transition: all 0.3s;
+}
+@media (width > 1600px) {
+  main .first {
+    flex-wrap: nowrap;
+  }
+  main .first .item {
+    min-width: none;
+  }
+}
+main .second {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+main .second .item {
+  cursor: pointer;
+  min-width: 250px;
+  flex-grow: 1;
+}
+main .second .item img {
+  width: 100%;
+}
+main .second .item img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.5);
+  transition: all 0.3s;
+}
+@media (width > 1600px) {
+  main .second {
+    flex-wrap: nowrap;
+  }
+  main .second .item {
+    min-width: none;
+  }
+}
+
+/*# sourceMappingURL=mystyle.css.map */
