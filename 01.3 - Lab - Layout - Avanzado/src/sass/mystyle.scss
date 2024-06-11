@@ -32,7 +32,7 @@ header {
 		gap: 16px;
 
 		.platform-title {
-			@media (width < 1280px) {
+			@media (width < $desktop-breakpoint) {
 				display: none;
 			}
 		}
@@ -70,12 +70,12 @@ main {
 			font-weight: bold;
 			content: "5";
 
-			@media (width < 1280px) {
+			@media (width < $desktop-breakpoint) {
 				content: "3";
 			}
 		}
 
-		@media (width < 1280px) {
+		@media (width < $desktop-breakpoint) {
 			font-size: 24px;
 		}
 
@@ -99,7 +99,7 @@ main {
 			}
 		}
 
-		@media (width < 1280px) {
+		@media (width < $desktop-breakpoint) {
 
 			div:nth-child(4),
 			div:nth-child(5) {
@@ -107,7 +107,7 @@ main {
 			}
 		}
 
-		@media (width < 576px) {
+		@media (width < $mobile-breakpoint) {
 			flex-direction: column;
 		}
 
