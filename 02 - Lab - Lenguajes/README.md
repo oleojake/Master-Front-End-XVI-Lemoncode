@@ -7,7 +7,7 @@ npm start
 ````
 Por defecto en el puerto ``http://localhost:3000/`` podremos acceder a los diferentes ejercicios:
 
-#### [=> Ejercicio 1 Source](/src/02-entregables/ejercicio-01.ts)
+#### [=> Ejercicio 1 Source](./src/02-entregables/ejercicio-01.ts)
 ````
 ** 1. Array operations **
 HEAD: one
@@ -16,7 +16,7 @@ NIT: one,two,three
 LAST: four
 ORIGINAL ARRAY: one,two,three,four
 ````
-#### [=> Ejercicio 2 Source](/src/02-entregables/ejercicio-02.ts)
+#### [=> Ejercicio 2 Source](./src/02-entregables/ejercicio-02.ts)
 ````
 ** 2. Concat **
 CONCAT ARRAY: one,two,three,four
@@ -27,7 +27,7 @@ ORIGINAL ARRAY 1: one,two
 ORIGINAL ARRAY 2: three,four
 ORIGINAL ARRAY 3: five,six
 ````
-#### [=> Ejercicio 3 Source](/src/02-entregables/ejercicio-03.ts)
+#### [=> Ejercicio 3 Source](./src/02-entregables/ejercicio-03.ts)
 ````
 ** 3. Clone Merge **
 ORIGINAL:
@@ -41,14 +41,14 @@ TARGET:
 MERGED:
 {name: 'Maria', age: 31, married: true, surname: 'Ibañez', country: 'SPA'}
 ````
-#### [=> Ejercicio 4 Source](/src/02-entregables/ejercicio-04.ts)
+#### [=> Ejercicio 4 Source](./src/02-entregables/ejercicio-04.ts)
 ````
 ** 4. Read Books **
 Devastación: true
 Canción de hielo y fuego: false
 Los Pilares de la Tierra: false
 ````
-#### [=> Ejercicio 5 Source](/src/02-entregables/ejercicio-05.ts)
+#### [=> Ejercicio 5 Source](./src/02-entregables/ejercicio-05.ts)
 ````
 ** 5. Slot Machine **
 SIMULATING 10 SLOTS SPINS!
