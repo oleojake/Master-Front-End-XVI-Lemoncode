@@ -36,19 +36,7 @@ h1 {
 		background-color: $red-color;
 	}
 
-	$i: 1;
-	@while $i <=4 {
-		.lighten-#{$i} {
-			background-color: lighten($red-color, $i * 5%);
-			color: darken(#333, $i * 10%)
-		}
-
-		.darken-#{$i} {
-			background-color: darken($red-color, $i * 5%);
-			color: lighten(#b5b5b5, $i * 10%)
-		}
-		$i: $i + 1;
-	}
+	@include degrade-color($red-color);
 }
 
 .container-2 {
@@ -61,19 +49,7 @@ h1 {
 		background-color: $blue-color;
 	}
 
-	$i: 1;
-	@while $i <=4 {
-		.lighten-#{$i} {
-			background-color: lighten($blue-color, $i * 5%);
-			color: darken(#333, $i * 10%)
-		}
-
-		.darken-#{$i} {
-			background-color: darken($blue-color, $i * 5%);
-			color: lighten(#b5b5b5, $i * 10%)
-		}
-		$i: $i + 1;
-	}
+	@include degrade-color($blue-color);
 }
 
 .container-3 {
@@ -86,17 +62,5 @@ h1 {
 		background-color: $green-color;
 	}
 
-	$i: 1;
-	@while $i <=4 {
-		.lighten-#{$i} {
-			background-color: lighten($green-color, $i * 5%);
-			color: darken(#333, $i * 10%)
-		}
-
-		.darken-#{$i} {
-			background-color: darken($green-color, $i * 5%);
-			color: lighten(#b5b5b5, $i * 10%)
-		}
-		$i: $i + 1;
-	}
+	@include degrade-color($green-color);
 }
