@@ -6,10 +6,12 @@ body {
 	padding: 0;
 	display: grid;
 	grid-template-columns: 1fr 6fr;
+	grid-template-rows: auto 1fr auto;
 	grid-template-areas:
 		"header header"
 		"nav main"
 		"footer footer";
+	height: 100vh;
 
 	@media (width < $desktop-breakpoint) {
 		display: flex;
