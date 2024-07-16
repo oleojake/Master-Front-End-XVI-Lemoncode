@@ -5,6 +5,8 @@ import { HelloWorld } from "./hello-world.component";
 const root = createRoot(document.getElementById("root"));
 root.render(
   <>
-    <HelloWorld />
+    			<HelloWorld 
+		
+		/>
   </>
 );
