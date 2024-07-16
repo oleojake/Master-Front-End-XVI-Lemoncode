@@ -13,7 +13,7 @@
 		"build:dev": "webpack --config webpack.dev.js",
 		"build:prod": "webpack --config webpack.prod.js",
 		"build:perf": "npm run type-check && webpack --config webpack.perf.js",
-		"prepare": "husky"
+		"prepare": "cd .. && husky 03%20-%20Lab%20-%20Bundling/.husky" 
 	},
 	"keywords": [],
 	"author": "",
