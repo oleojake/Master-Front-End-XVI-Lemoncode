@@ -1,5 +1,0 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-echo debugging the pre-commit hook 1>&2
-
-npx lint-staged
