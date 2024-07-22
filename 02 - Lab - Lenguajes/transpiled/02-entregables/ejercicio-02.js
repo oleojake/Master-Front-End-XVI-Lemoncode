@@ -21,8 +21,9 @@ var concatMulti = function () {
     for (var _i = 0; _i < arguments.length; _i++) {
         args[_i] = arguments[_i];
     }
-    return args.reduce(function (a, b) { return __spreadArray(__spreadArray([], a, true), b, true); }, []);
+    return args.reduce(function (acc, curr) { return __spreadArray(__spreadArray([], acc, true), curr, true); }, []);
 };
+console.log("**Opcional**");
 console.log("MULTIPLE CONCAT ARRAY: ".concat(concatMulti(myArray1, myArray2, myArray3)));
 console.log("ORIGINAL ARRAY 1: ".concat(myArray1));
 console.log("ORIGINAL ARRAY 2: ".concat(myArray2));

@@ -24,15 +24,12 @@ var tail = function (_a) {
 console.log("TAIL: ".concat(tail(myArray)));
 // INIT
 var init = function (array) {
-    var auxArray = __spreadArray([], array, true);
-    auxArray.pop();
-    return auxArray;
+    return array.slice(0, -1);
 };
 console.log("INIT: ".concat(init(myArray)));
 // LAST
 var last = function (array) {
-    var auxArray = __spreadArray([], array, true);
-    return auxArray.pop();
+    return array[array.length - 1];
 };
 console.log("LAST: ".concat(last(myArray)));
 // ARRAY INMUTABLE

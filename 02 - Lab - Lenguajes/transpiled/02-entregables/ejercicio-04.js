@@ -1,11 +1,11 @@
 console.log("************** DELIVERABLE 04 **************");
 console.log("** 4. Read Books **");
-function isBookRead(books, titleToSearch) {
+var isBookRead = function (books, titleToSearch) {
     var book = books.find(function (book) { return book.title === titleToSearch; });
     return book
         ? book.isRead
         : false;
-}
+};
 // Ejemplo:
 var books = [
     { title: "Harry Potter y la piedra filosofal", isRead: true },

@@ -1,16 +1,16 @@
 console.log("************** DELIVERABLE 04 **************");
 console.log("** 4. Read Books **");
 
-function isBookRead(books: Book[], titleToSearch: string): boolean {
+interface Book {
+	title: string;
+	isRead: boolean;
+}
+
+const isBookRead = (books: Book[], titleToSearch: string): boolean => {
 	const book = books.find((book: Book): boolean => book.title === titleToSearch);
 	return book
 		? book.isRead
 		: false
-}
-
-interface Book {
-	title: string;
-	isRead: boolean;
 }
 
 // Ejemplo:

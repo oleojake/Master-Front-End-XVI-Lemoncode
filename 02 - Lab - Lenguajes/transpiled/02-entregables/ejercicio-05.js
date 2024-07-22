@@ -1,8 +1,8 @@
 console.log("************** DELIVERABLE 05 **************");
 console.log("** 5. Slot Machine **");
-function getRandomBool() {
+var getRandomBool = function () {
     return Math.random() >= 0.5;
-}
+};
 var SlotMachine = /** @class */ (function () {
     function SlotMachine() {
         this.coins = 0;

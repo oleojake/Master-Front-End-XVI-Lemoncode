@@ -1,22 +1,21 @@
 console.log("************** DELIVERABLE 05 **************");
 console.log("** 5. Slot Machine **");
 
-
-function getRandomBool(): boolean {
+const getRandomBool = (): boolean => {
 	return Math.random() >= 0.5;
 }
 
 class SlotMachine {
 	coins: number;
-	
-	constructor () {
+
+	constructor() {
 		this.coins = 0;
 	}
 
-	play() {
-		this.coins ++;
+	play(): void {
+		this.coins++;
 		const result = [getRandomBool(), getRandomBool(), getRandomBool()];
-		if(result[0] && result[1] && result[2]){
+		if (result[0] && result[1] && result[2]) {
 			console.log(`Congratulations!!!. You won ${this.coins} coins!!`);
 			this.coins = 0;
 		} else {
@@ -27,6 +26,6 @@ class SlotMachine {
 
 const machine1 = new SlotMachine();
 console.log("SIMULATING 10 SLOTS SPINS!")
-for ( let i = 0 ; i < 10; i++) {
+for (let i = 0; i < 10; i++) {
 	machine1.play();
 }
