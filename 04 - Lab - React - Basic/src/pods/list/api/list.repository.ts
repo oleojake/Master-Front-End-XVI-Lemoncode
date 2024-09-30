@@ -1,5 +1,5 @@
-import { MemberEntity } from "./list.vm";
-import { getMemberCollection as getMemberCollectionApi } from "./api/list.api";
+import { MemberEntity } from "../list.vm";
+import { getMemberCollection as getMemberCollectionApi } from "./list.api";
 import { mapMemberCollectionFromApiToVm } from "./list.mapper";
 
 export const getMemberCollection = (company: string): Promise<MemberEntity[]> => {

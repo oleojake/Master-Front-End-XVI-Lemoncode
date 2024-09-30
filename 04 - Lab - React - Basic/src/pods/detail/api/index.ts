@@ -1,2 +1,1 @@
-export * from "./detail.api-model";
-export * from "./detail.api";
+export * from "./detail.repository";

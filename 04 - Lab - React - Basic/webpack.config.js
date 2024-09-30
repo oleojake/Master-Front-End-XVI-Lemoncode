@@ -10,7 +10,7 @@ module.exports = {
 		plugins: [new TsconfigPathPlugin()],
 	},
 	entry: {
-		app: ["./index.tsx", "./global-css/styles.css"],
+		app: ["./index.tsx", "./global-css/reset.css", "./global-css/normalize.css"],
 	},
 	devtool: "eval-source-map",
 	stats: "errors-only",
@@ -51,7 +51,12 @@ module.exports = {
 							},
 						},
 					},
-					"sass-loader",
+					{
+						loader: "sass-loader",
+						options: {
+							additionalData: `@import "global-css/main.scss";`,
+						},
+					},
 				],
 			},
 			{

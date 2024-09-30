@@ -1,11 +1,11 @@
-import { CenteredLayout } from "@/layout";
+import { AppLayout } from "@/layout";
 import { ListContainer } from "@/pods/list/list.container";
 import React from "react";
 
 export const ListScene: React.FC = () => {
 	return (
-		<CenteredLayout>
+		<AppLayout>
 			<ListContainer />
-		</CenteredLayout>
+		</AppLayout>
 	);
 };

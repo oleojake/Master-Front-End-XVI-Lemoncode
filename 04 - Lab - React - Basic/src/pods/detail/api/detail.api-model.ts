@@ -1,4 +1,4 @@
-export interface MemberDetailEntityApi {
+export interface MemberDetailApi {
 	login: string;
 	id: number;
 	node_id: string;

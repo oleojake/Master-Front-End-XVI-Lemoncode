@@ -1,15 +1,15 @@
-import * as vm from "./list.vm";
-import * as api from "./api/list.api-model";
+import { MemberEntity } from "../list.vm";
+import { MemberEntityApi } from "./list.api-model";
 
 export const mapMemberFromApiToVm = (
-	member: api.MemberEntityApi
-): vm.MemberEntity => ({
+	member: MemberEntityApi
+): MemberEntity => ({
 	id: member.id.toString(),
 	login: member.login,
 	avatar_url: member.avatar_url,
 });
 
 export const mapMemberCollectionFromApiToVm = (
-	memberCollection: api.MemberEntityApi[]
-): vm.MemberEntity[] =>
+	memberCollection: MemberEntityApi[]
+): MemberEntity[] =>
 	memberCollection.map((member) => mapMemberFromApiToVm(member));

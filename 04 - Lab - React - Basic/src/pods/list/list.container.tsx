@@ -2,12 +2,12 @@ import React from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { ListComponent } from "./list.component";
 import { MemberEntity } from "./list.vm";
-import { getMemberCollection } from "./list.repository";
+import { getMemberCollection } from "./api/list.repository";
 
 export const ListContainer: React.FC = () => {
 	const [members, setMembers] = React.useState<MemberEntity[]>([]);
-	const [company, setCompany] = React.useState<string>("lemoncode");
-	const [error, setError] = React.useState<string | null>(null); // Nuevo estado para manejar errores
+	const [company, setCompany] = React.useState<string>("Lemoncode");
+	const [error, setError] = React.useState<string | null>(null);
 	const companyInputRef = React.useRef<HTMLInputElement>(null);
 	const location = useLocation();
 
@@ -23,9 +23,7 @@ export const ListContainer: React.FC = () => {
 				setMembers(memberCollection);
 				setError(null);
 			})
-			.catch(() =>
-				setError("Error al buscar la organización. Verifica el nombre.")
-			);
+			.catch(() => setError("Error searching the company. Check the name."));
 	}, [company]);
 
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {

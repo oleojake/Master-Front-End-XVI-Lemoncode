@@ -1,11 +1,11 @@
-import { CenteredLayout } from "@/layout";
+import { AppLayout } from "@/layout";
 import { DetailContainer } from "@/pods/detail/detail.container";
 import React from "react";
 
 export const DetailScene: React.FC = () => {
 	return (
-		<CenteredLayout>
+		<AppLayout>
 			<DetailContainer />
-		</CenteredLayout>
+		</AppLayout>
 	);
 };
