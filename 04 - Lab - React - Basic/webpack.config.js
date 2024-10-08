@@ -37,6 +37,17 @@ module.exports = {
 				loader: "html-loader",
 			},
 			{
+				test: /\.svg$/,
+				use: [
+					{
+						loader: "@svgr/webpack",
+						options: {
+							icon: true,
+						},
+					},
+				],
+			},
+			{
 				test: /\.scss$/,
 				exclude: /node_modules/,
 				use: [

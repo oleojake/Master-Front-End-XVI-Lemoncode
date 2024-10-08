@@ -1,0 +1,11 @@
+.list-container{
+	width: 80%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2em;
+	padding: 2em 0em;
+
+	@media screen and (max-width: $breakpoint-md){
+		grid-template-columns: 1fr;
+	}
+}

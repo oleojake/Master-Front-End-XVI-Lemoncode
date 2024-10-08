@@ -10,15 +10,16 @@ import SearchIcon from "@mui/icons-material/Search";
 import classes from "./searchbar.component.module.scss";
 
 interface SearchBarComponentProps {
-	companyInputRef: React.RefObject<HTMLInputElement>;
+	inputRef: React.RefObject<HTMLInputElement>;
 	handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 	error: string | null;
+	placeholder?: string;
 }
 
 export const SearchBarComponent: React.FC<SearchBarComponentProps> = (
 	props
 ) => {
-	const { companyInputRef, handleSubmit, error } = props;
+	const { inputRef: companyInputRef, handleSubmit, error, placeholder } = props;
 
 	return (
 		<Box className={classes.container}>
@@ -26,7 +27,7 @@ export const SearchBarComponent: React.FC<SearchBarComponentProps> = (
 				<TextField
 					className={classes.searchBar}
 					inputRef={companyInputRef}
-					label="Search by company..."
+					label={placeholder ? placeholder : "Search..."}
 					variant="outlined"
 					size="small"
 					slotProps={{

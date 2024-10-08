@@ -38,7 +38,7 @@ export const ListContainer: React.FC = () => {
 			<ListComponent
 				members={members}
 				company={company}
-				companyInputRef={companyInputRef}
+				inputRef={companyInputRef}
 				handleSubmit={handleSubmit}
 				error={error}
 			/>

@@ -1,0 +1,74 @@
+.character-card {
+  display: flex;
+  background-color: #3C3E44;
+  color: white;
+  border-radius: 0.5em;
+  overflow: hidden;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #4f5056;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    transition: all 0.3s;
+
+    img {
+      filter: brightness(1.1);
+      transform: scale(1.1);
+      transition: all 0.3s;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-sm) {
+    flex-direction: column;
+  }
+
+  img {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s, filter 0.3s;
+
+		@media screen and (max-width: $breakpoint-sm){
+			width: 100%;
+		}
+	}
+
+	.character-info{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 1em 2em;
+
+		.character-name{
+			font-size: 1.5em;
+			font-weight: bold;
+		}
+
+		.character-status{
+			font-size: 1em;
+			font-weight: lighter;
+		}
+
+		.character-status-icon {
+			display: inline-block; 
+			font-size: 1em;
+			height: 0.5em;
+			width: 0.5em;
+			border-radius: 50%;
+			background-color: gray;
+			margin-right: 0.5em;
+	}
+
+		.character-location{
+			font-size: 1.2em;
+			font-weight: normal;
+		}
+
+		.character-info-title{
+			font-size: 1em;
+			font-weight: bold;
+			color:#9e9e9e;
+			margin-top: 0.5em;
+		}
+	}
+}

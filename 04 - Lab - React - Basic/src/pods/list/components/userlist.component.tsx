@@ -16,7 +16,8 @@ export const UserListComponent: React.FC<UserListComponentProps> = (props) => {
 	const { error, members, company } = props;
 	return (
 		<Box>
-			{!error && (
+			{members.length === 0 && <h2>Loading...</h2>}
+			{!error && members.length !== 0 && (
 				<Box>
 					<Typography
 						variant="h6"
