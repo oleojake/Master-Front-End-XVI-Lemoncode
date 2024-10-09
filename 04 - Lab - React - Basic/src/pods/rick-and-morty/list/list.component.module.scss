@@ -1,3 +1,10 @@
+.buttons-area{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1em;
+}
+
 .list-container{
 	width: 80%;
 	display: grid;
