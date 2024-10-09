@@ -4,6 +4,12 @@ This is a boilerplate template designed to help you structure your React project
 
 The boilerplate is built with **Webpack** as the bundler, and comes with built-in support for **Material UI (MUI)**, **Sass**, and **CSS Modules**, ensuring a scalable and flexible foundation for styling your components. It's designed to be clean, efficient, and easily adaptable to different project needs.
 
+## _Psst! Over here!_
+
+What will happen if you click on this strange button?
+
+![burp-button](src/public/burp-button.JPG)
+
 ## Features
 
 - Organized **Pods Architecture** for modular and scalable code
