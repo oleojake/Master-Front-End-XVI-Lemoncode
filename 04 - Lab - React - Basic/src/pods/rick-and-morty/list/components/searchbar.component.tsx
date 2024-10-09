@@ -32,21 +32,6 @@ export const SearchBarComponent: React.FC<SearchBarComponentProps> = (
 				label={placeholder ? placeholder : "Search..."}
 				variant="outlined"
 				size="small"
-				slotProps={{
-					input: {
-						endAdornment: (
-							<InputAdornment position="end">
-								<IconButton
-									style={{ backgroundColor: "transparent" }}
-									disableRipple
-									type="submit"
-								>
-									<SearchIcon fontSize="medium" />
-								</IconButton>
-							</InputAdornment>
-						),
-					},
-				}}
 			/>
 
 			{error && (
