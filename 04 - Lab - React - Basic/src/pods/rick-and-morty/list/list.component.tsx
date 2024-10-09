@@ -1,6 +1,6 @@
 import React from "react";
 import { RickAndMortyEntity } from "./list.vm";
-import { SearchBarComponent } from "../../list/components/searchbar.component";
+import { SearchBarComponent } from "./components/searchbar.component";
 import { Box, Button } from "@mui/material";
 import { routes } from "@/router";
 import { Link } from "react-router-dom";
@@ -10,10 +10,10 @@ import classes from "./list.component.module.scss";
 
 interface RickAndMortyComponentProps {
 	characters: RickAndMortyEntity[];
-	handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 	reloadCharacters: () => void;
 	inputRef: React.RefObject<HTMLInputElement>;
 	error: string | null;
+	setFilter: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export const RickAndMortyComponent: React.FC<RickAndMortyComponentProps> = (
@@ -22,17 +22,17 @@ export const RickAndMortyComponent: React.FC<RickAndMortyComponentProps> = (
 	const {
 		characters,
 		inputRef: characterInputRef,
-		handleSubmit,
 		reloadCharacters,
 		error,
+		setFilter,
 	} = props;
 	return (
 		<>
 			<SearchBarComponent
 				inputRef={characterInputRef}
-				handleSubmit={handleSubmit}
 				error={error}
 				placeholder="Search by character..."
+				setFilter={setFilter}
 			/>
 			<Box className={classes.buttonsArea}>
 				<Button

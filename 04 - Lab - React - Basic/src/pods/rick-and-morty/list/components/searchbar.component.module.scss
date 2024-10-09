@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+	padding: 0.5em;
+	border-radius: 0.5em;
+	background-color: #F5F5F5;
+
+  .search-bar {
+    width: 30vw;
+
+    @media (max-width: $breakpoint-md) {
+      width: 50vw;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      width: 80vw;
+    }
+  }
+
+  .error {
+    margin: 1em;
+  }
+}
+
