@@ -10,14 +10,21 @@ export const DetailContainer: React.FC = () => {
 	const [memberDetail, setMemberDetail] = React.useState<MemberDetail>(
 		createDefaultMemberDetail()
 	);
+	const [loading, setLoading] = React.useState<boolean>(true);
 
 	React.useEffect(() => {
-		getMemberDetail(id).then((memberDetail) => setMemberDetail(memberDetail));
+		getMemberDetail(id).then((memberDetail) => {
+			setMemberDetail(memberDetail);
+			setLoading(false);
+		});
 	}, []);
 
 	return (
 		<>
-			<DetailComponent member={memberDetail} company={location.state?.company} />
+			{loading && <h2>Loading...</h2>}
+			{!loading && (
+				<DetailComponent member={memberDetail} company={location.state?.company} />
+			)}
 		</>
 	);
 };
