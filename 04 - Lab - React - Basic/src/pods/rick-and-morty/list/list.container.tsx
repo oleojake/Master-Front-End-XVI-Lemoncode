@@ -39,7 +39,6 @@ export const RickAndMortyListContainer: React.FC = () => {
 			inputRef={characterInputRef}
 			error={error}
 			setFilter={setFilter}
-			filter={filter}
 		/>
 	);
 };
