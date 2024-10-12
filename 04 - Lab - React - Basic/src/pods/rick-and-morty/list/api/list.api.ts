@@ -14,27 +14,25 @@ export const getEpisodeName = async (episodeUrl: string): Promise<string> => {
 		.then((data) => data.name);
 };
 
-export const getCharacterCollection = async (name?: string): Promise<RickAndMortyEntityApi[]> => {
+export const getCharacterCollection = async (): Promise<RickAndMortyEntityApi[]> => {
+	const url = `https://rickandmortyapi.com/api/character`;
+	return fetch(url)
+		.then((response) => response.json())
+		.then((data1) => {
+			const totalCharacters = data1.info.count;
+			return fetch(
+				`https://rickandmortyapi.com/api/character/[${get10RandomCharacters(
+					totalCharacters
+				)}]`
+			);
+		})
+		.then((response) => response.json())
+		.then((data2) => data2);
+};
 
-	if (name) {
-		const url = `https://rickandmortyapi.com/api/character/?name=${name}`;
-		return fetch(url)
-			.then((response) => response.json())
-			.then((data) => data.results);
-	}
-	else {
-		const url = `https://rickandmortyapi.com/api/character`;
-		return fetch(url)
-			.then((response) => response.json())
-			.then((data1) => {
-				const totalCharacters = data1.info.count;
-				return fetch(
-					`https://rickandmortyapi.com/api/character/[${get10RandomCharacters(
-						totalCharacters
-					)}]`
-				);
-			})
-			.then((response) => response.json())
-			.then((data2) => data2);
-	}
+export const getCharacterCollectionFilteredByName = async (name: string): Promise<RickAndMortyEntityApi[]> => {
+	const url = `https://rickandmortyapi.com/api/character/?name=${name}`;
+	return fetch(url)
+		.then((response) => response.json())
+		.then((data) => data.results);
 };

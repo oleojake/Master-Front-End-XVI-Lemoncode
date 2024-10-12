@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import { useDebounce } from "use-debounce";
-import { getCharacterCollection } from "./api/list.repository";
+import {
+	getCharacterCollection,
+	getCharacterCollectionFilteredByName,
+} from "./api/list.repository";
 import { RickAndMortyComponent } from "./list.component";
 import { RickAndMortyEntity } from "./list.vm";
 
@@ -16,7 +19,7 @@ export const RickAndMortyListContainer: React.FC = () => {
 	}, []);
 
 	useEffect(() => {
-		getCharacterCollection(characterInputRef.current.value)
+		getCharacterCollectionFilteredByName(characterInputRef.current.value)
 			.then((data) => {
 				setCharacters(data);
 				setError(null);
@@ -26,6 +29,7 @@ export const RickAndMortyListContainer: React.FC = () => {
 
 	const reloadCharacters = () => {
 		getCharacterCollection().then((data) => setCharacters(data));
+		characterInputRef.current.value = "";
 	};
 
 	return (
@@ -35,6 +39,7 @@ export const RickAndMortyListContainer: React.FC = () => {
 			inputRef={characterInputRef}
 			error={error}
 			setFilter={setFilter}
+			filter={filter}
 		/>
 	);
 };
