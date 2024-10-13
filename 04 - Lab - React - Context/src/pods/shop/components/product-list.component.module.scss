@@ -1,0 +1,6 @@
+.product-list-container{
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		text-align: center;
+		gap: 2em;
+}

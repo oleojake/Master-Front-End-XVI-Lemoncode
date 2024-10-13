@@ -1,0 +1,26 @@
+.drawer {
+  width: $drawer-closed-width; 
+  overflow-x: hidden;
+  transition: width $transition-duration-leave $transition-easing-sharp;
+
+  &.drawerOpen {
+    width: $drawer-width-small;
+    transition: width $transition-duration-enter $transition-easing-sharp;
+
+    @media screen and (min-width: $breakpoint-md) {
+      width: $drawer-width-default;
+    }
+  }
+}
+
+.drawerPaper {
+  width: inherit; // Mantiene el ancho del drawer
+  overflow-x: hidden;
+}
+
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px 8px;
+}

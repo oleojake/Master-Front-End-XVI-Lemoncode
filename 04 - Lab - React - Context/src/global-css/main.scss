@@ -1,0 +1,19 @@
+// Breakpoints
+$breakpoint-xs: 0;
+$breakpoint-sm: 600px;
+$breakpoint-md: 960px;
+$breakpoint-lg: 1280px;
+$breakpoint-xl: 1920px;
+
+// Drawer
+$drawer-width-small: 10em;
+$drawer-width-default: 30em;
+$drawer-closed-width: 4em;
+$transition-duration-enter: 225ms;
+$transition-duration-leave: 195ms;
+$transition-easing-sharp: cubic-bezier(0.4, 0, 0.6, 1);
+
+body {
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+}

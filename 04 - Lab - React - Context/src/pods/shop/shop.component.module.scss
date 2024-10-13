@@ -1,0 +1,16 @@
+.main-content {
+	padding: 2em;
+  margin-right: $drawer-width-default;
+	transition: margin-right $transition-duration-leave $transition-easing-sharp;
+
+	@media screen and (max-width: $breakpoint-sm) {
+		margin-right: $drawer-width-small;
+	}
+
+	&.main-content-close{
+		margin-right: $drawer-closed-width;
+		transition: margin-right $transition-duration-enter $transition-easing-sharp;
+	}
+
+}
+
