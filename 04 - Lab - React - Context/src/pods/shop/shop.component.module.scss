@@ -4,7 +4,7 @@
 	transition: margin-right $transition-duration-leave $transition-easing-sharp;
 
 	@media screen and (max-width: $breakpoint-sm) {
-		margin-right: $drawer-width-small;
+		margin-right: 0px;
 	}
 
 	&.main-content-close{

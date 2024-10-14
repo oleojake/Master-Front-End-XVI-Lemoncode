@@ -4,6 +4,7 @@ import { CartContext } from "./cart.context";
 import { categories, PictureInfo } from "@/pods/shop/shop.vm";
 import { mockPictures } from "@/pods/shop/mock-products";
 import { findPicture, findPicturesSelected } from "./cart.helper";
+import { openSnackBarProductAdded } from "@/provider/snackbar/snackbar.helper";
 
 export const CartProvider: React.FC<PropsWithChildren> = ({ children }) => {
 	const [open, setOpen] = React.useState(true);
@@ -43,6 +44,7 @@ export const CartProvider: React.FC<PropsWithChildren> = ({ children }) => {
 			setSelectedPictures(updatedCart);
 		} else {
 			setSelectedPictures([...selectedPictures, picture]);
+			openSnackBarProductAdded(picture.title);
 		}
 	};
 

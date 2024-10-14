@@ -10,7 +10,9 @@ export const ProductList: React.FC = () => {
 	return (
 		<Box className={classes.cartContainer}>
 			{selectedPictures.length === 0 && (
-				<Typography variant="h6">Start adding some product...</Typography>
+				<Typography variant="h6">
+					Get your daily dose of feline awesomeness...
+				</Typography>
 			)}
 			{selectedPictures.length > 0 && (
 				<Typography variant="h6">Products in Cart</Typography>
