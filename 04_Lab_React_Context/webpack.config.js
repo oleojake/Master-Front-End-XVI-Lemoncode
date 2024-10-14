@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const path = require("path");
 const basePath = __dirname;
 const TsconfigPathPlugin = require("tsconfig-paths-webpack-plugin");
@@ -16,6 +17,7 @@ module.exports = {
 	stats: "errors-only",
 	output: {
 		filename: "[name].[chunkhash].js",
+		path: path.resolve(__dirname, "dist"),
 		publicPath: "/",
 	},
 	devServer: {
@@ -97,6 +99,11 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			filename: "index.html", //Name of file in ./dist/
 			template: "index.html", //Name of template in ./src
+		}),
+		new CopyWebpackPlugin({
+			patterns: [
+				{ from: path.resolve(__dirname, "public", "images"), to: "images" }, // Copia imágenes a dist
+			],
 		}),
 	],
 };
