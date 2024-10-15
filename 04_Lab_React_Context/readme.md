@@ -40,10 +40,6 @@ This will launch the app on **http://localhost:8080**. Open it in your browser, 
 
 The development server will automatically reload when you make changes to the code.
 
-**Attention! ⚠️** If you want to see all the features adapted for mobile, such as the sliding cart, it will not be enough to use your browser window. That's why I've prepared the following live demo for you to open it from your smartphone.
-
-**LIVE DEMO:** https://catpic.netlify.app/
-
 ## Store View Functionality
 
 We have a main store view where the available images are displayed on the left and a shopping cart on the right. Each time the user selects an image on one of the pages, it is added to the cart. If a user removes an image from the cart, it is deselected from the page (if it is currently active).
@@ -61,5 +57,9 @@ We have a main store view where the available images are displayed on the left a
 ## Mobile Design Adaptation
 
 In the mobile design, we've implemented an alternative method for hiding the cart, as the desktop approach was too intrusive for mobile users. To enhance the user experience, we've utilized a **Swipeable Drawer from MUI**, the library we've employed to style the entire application. This allows users to easily access the cart without interrupting their browsing experience, making it more convenient and intuitive for mobile users.
+
+**Attention! ⚠️** If you want to see all the features adapted for mobile, such as the sliding cart, it will not be enough to use your browser window. That's why I've prepared the following live demo for you to open it from your smartphone.
+
+**LIVE DEMO:** https://catpic.netlify.app/
 
 <img src="public/readme/mobile-preview.gif" alt="Mobile Preview" height="500" />
