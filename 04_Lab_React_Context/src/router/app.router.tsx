@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { NotFoundScene, ShopScene } from "@/scenes";
+import { CartScene, NotFoundScene, ShopScene } from "@/scenes";
 import { switchRoutes } from "./routes";
 
 export const AppRouter = () => {
@@ -8,6 +8,7 @@ export const AppRouter = () => {
 		<Router>
 			<Routes>
 				<Route path={switchRoutes.root} element={<ShopScene />} />
+				<Route path={switchRoutes.cart} element={<CartScene />} />
 				<Route path="*" element={<NotFoundScene />} />
 			</Routes>
 		</Router>

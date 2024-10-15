@@ -2,10 +2,10 @@ import { generatePath } from "react-router-dom";
 
 interface SwitchRoutes {
 	root: string;
-	detail: string;
+	cart: string;
 }
 
 export const switchRoutes: SwitchRoutes = {
 	root: "/",
-	detail: "/cart",
+	cart: "/cart",
 };

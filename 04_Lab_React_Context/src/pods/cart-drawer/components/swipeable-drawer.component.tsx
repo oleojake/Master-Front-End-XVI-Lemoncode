@@ -3,7 +3,7 @@ import { Global } from "@emotion/react";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
-import { ProductList, ShoppingBasketIconComponent } from "./components/";
+import { ProductList, ShoppingBasketIconComponent } from "./components";
 import styles from "./swipeable-drawer.component.module.scss";
 
 const drawerBleeding = 56;

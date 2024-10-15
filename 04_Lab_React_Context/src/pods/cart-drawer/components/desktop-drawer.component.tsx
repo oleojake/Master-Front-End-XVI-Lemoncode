@@ -1,7 +1,7 @@
 import React from "react";
 import MuiDrawer from "@mui/material/Drawer";
 import { Box, IconButton } from "@mui/material";
-import { ProductList, ShoppingBasketIconComponent } from "./components/";
+import { ProductList, ShoppingBasketIconComponent } from "./components";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import classes from "./desktop-drawer.component.module.scss";

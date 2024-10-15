@@ -1,11 +1,11 @@
-import { ShopLayout } from "@/layout";
+import { Layout404 } from "@/layout";
 import { NotFoundContainer } from "@/pods/not-found";
 import React from "react";
 
 export const NotFoundScene: React.FC = () => {
 	return (
-		<ShopLayout>
+		<Layout404>
 			<NotFoundContainer />
-		</ShopLayout>
+		</Layout404>
 	);
 };

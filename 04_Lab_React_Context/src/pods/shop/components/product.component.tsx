@@ -1,6 +1,6 @@
 import React from "react";
 import { PictureInfo } from "../shop.vm";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import classes from "./product.component.module.scss";
 import { ProductButton } from "./product-button.component";
 

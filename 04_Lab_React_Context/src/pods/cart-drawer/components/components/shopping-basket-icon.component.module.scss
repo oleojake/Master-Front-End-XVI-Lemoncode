@@ -1,0 +1,11 @@
+.shopping-icon {
+	text-align: center;
+
+	@media screen and (max-width: $breakpoint-sm) {
+		text-align: left;
+	}
+}
+
+.shopping-icon-disabled {
+	color: lightgrey;
+}

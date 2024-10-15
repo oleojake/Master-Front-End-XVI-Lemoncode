@@ -1,0 +1,15 @@
+.cart-container {
+	padding: 1em 2em;
+	width: 95vw;
+
+	@media screen and (min-width: $breakpoint-sm) {
+		width: 40vw;
+	}
+}
+
+.cart-product-list {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	padding: 1em 0em;
+}
