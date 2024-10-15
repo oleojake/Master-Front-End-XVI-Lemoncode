@@ -54,7 +54,12 @@ We have a main store view where the available images are displayed on the left a
 - We have added a category filtering option in the top menu.
 - We have included an option to empty the entire cart.
 - We have added an additional Checkout Page.
+- We have added floating notifications to inform the user when an image is added to the cart.
+
+![Desktop Preview](public/readme/desktop-preview.gif)
 
 ## Mobile Design Adaptation
 
 In the mobile design, we've implemented an alternative method for hiding the cart, as the desktop approach was too intrusive for mobile users. To enhance the user experience, we've utilized a **Swipeable Drawer from MUI**, the library we've employed to style the entire application. This allows users to easily access the cart without interrupting their browsing experience, making it more convenient and intuitive for mobile users.
+
+![Mobile Preview](public/readme/mobile-preview.gif)
