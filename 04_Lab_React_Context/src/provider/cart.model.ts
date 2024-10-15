@@ -9,4 +9,5 @@ export interface CartContextModel {
 	selectedPictures: PictureInfo[];
 	filter: categories;
 	handleFilterChange: (categories) => void;
+	emptyAllCart: () => void;
 }

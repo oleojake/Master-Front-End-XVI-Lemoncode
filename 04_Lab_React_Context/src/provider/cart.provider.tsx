@@ -48,6 +48,12 @@ export const CartProvider: React.FC<PropsWithChildren> = ({ children }) => {
 		}
 	};
 
+	const emptyAllCart = () => {
+		const updatedPictures = pictures.map((p) => ({ ...p, selected: false }));
+		setPictures(updatedPictures);
+		setSelectedPictures([]);
+	};
+
 	return (
 		<CartContext.Provider
 			value={{
@@ -59,6 +65,7 @@ export const CartProvider: React.FC<PropsWithChildren> = ({ children }) => {
 				selectedPictures: selectedPictures,
 				filter: filter,
 				handleFilterChange: handleFilterChange,
+				emptyAllCart: emptyAllCart,
 			}}
 		>
 			{children}
