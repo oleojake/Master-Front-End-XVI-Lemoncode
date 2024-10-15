@@ -16,7 +16,6 @@ export const ProductListHeader: React.FC = () => {
 					<Typography variant="h6">
 						Get your daily dose of feline awesomeness...
 					</Typography>
-					<ShoppingBasketIconComponent />
 				</Box>
 			)}
 			{selectedPictures.length > 0 && (
