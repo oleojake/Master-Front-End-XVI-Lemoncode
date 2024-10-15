@@ -62,4 +62,4 @@ We have a main store view where the available images are displayed on the left a
 
 In the mobile design, we've implemented an alternative method for hiding the cart, as the desktop approach was too intrusive for mobile users. To enhance the user experience, we've utilized a **Swipeable Drawer from MUI**, the library we've employed to style the entire application. This allows users to easily access the cart without interrupting their browsing experience, making it more convenient and intuitive for mobile users.
 
-![Mobile Preview](public/readme/mobile-preview.gif)
+<img src="public/readme/mobile-preview.gif" alt="Mobile Preview" height="500" />
