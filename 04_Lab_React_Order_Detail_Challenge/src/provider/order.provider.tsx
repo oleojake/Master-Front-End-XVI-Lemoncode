@@ -4,7 +4,10 @@ import { OrderContext } from "./order.context";
 import { mockOrderDetails, OrderDetails } from "./order.model";
 import {
 	getStatusPercentage,
+	getTotalAmount,
 	getTotalAmountProductsConfirmed,
+	updatePrice,
+	updateStatus,
 } from "./order.helper";
 
 export const OrderProvider: React.FC<PropsWithChildren> = ({ children }) => {
@@ -18,23 +21,27 @@ export const OrderProvider: React.FC<PropsWithChildren> = ({ children }) => {
 		React.useState<OrderDetails[]>(mockOrderDetails);
 
 	const updatePriceForOneProduct = (newPrice: number, id: number) => {
-		const updatedOrderDetails = [...orderDetails];
-		updatedOrderDetails.map((orderDetail) => {
-			if (orderDetail.id === id) {
-				orderDetail.price = newPrice;
-			}
-		});
-		setOrderDetails(updatedOrderDetails);
+		const updatedOrdersDetails = updatePrice(orderDetails, newPrice, id);
+		setOrderDetails(updatedOrdersDetails);
+		const totalAmount = getTotalAmount(orderDetails);
+		setTotalAmount(totalAmount);
 	};
 
 	const updateStatusForOneProduct = (id: number) => {
-		const updatedOrderDetails = [...orderDetails];
-		updatedOrderDetails.map((orderDetail) => {
-			if (orderDetail.id === id) {
-				orderDetail.status = !orderDetail.status;
-			}
-		});
-		setOrderDetails(updatedOrderDetails);
+		const updatedOrdersDetails = updateStatus(orderDetails, id);
+		setOrderDetails(updatedOrdersDetails);
+		const status = getStatusPercentage(orderDetails);
+		setStatus(status);
+	};
+
+	const updateTotalAmount = () => {
+		const totalAmount = getTotalAmount(orderDetails);
+		setTotalAmount(totalAmount);
+	};
+
+	const updateStatusPercentage = () => {
+		const status = getStatusPercentage(orderDetails);
+		setStatus(status);
 	};
 
 	return (
@@ -46,8 +53,8 @@ export const OrderProvider: React.FC<PropsWithChildren> = ({ children }) => {
 				totalAmount,
 				status,
 				orderDetails,
-				updatePriceForOneProduct: updatePriceForOneProduct,
-				updateStatusForOneProduct: updateStatusForOneProduct,
+				updatePriceForOneProduct,
+				updateStatusForOneProduct,
 			}}
 		>
 			{children}

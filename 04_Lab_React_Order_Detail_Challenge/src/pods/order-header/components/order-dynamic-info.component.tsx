@@ -17,7 +17,6 @@ export const OrderDynamicInfoComponent: React.FC = () => {
 				label="Status"
 				value={`${status.toFixed(0)} %`}
 			/>
-			<Button variant="contained">Send</Button>
 		</Box>
 	);
 };

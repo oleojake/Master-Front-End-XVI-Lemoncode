@@ -1,0 +1,30 @@
+
+.order-header-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-direction: column;
+	padding: 1em 2em;
+	gap: 1em;
+
+	.table-header{
+		background-color: #ececec;
+	}
+
+	.table-column{
+		width: 40%;
+	}
+
+	.table-column:first-child{
+		width: 30%;
+	}
+
+	.table-cell-pending{
+		color: #FFA500;
+	}
+
+	.table-cell-confirmed{
+		color: #008000;
+	}
+
+}
