@@ -1,1 +1,1 @@
-export * from "./404-layout/";
+export * from "./app.layout";

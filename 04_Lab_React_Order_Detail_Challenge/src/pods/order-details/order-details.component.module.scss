@@ -1,0 +1,46 @@
+.order-header-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: #FFFFFF;
+	width: 50vw;
+
+	.order-header-title {
+		font-size: 1.5rem;
+		background-color: #022213;
+		color: #FFFFFF;
+		padding: 0.2em 1em;
+	}
+}
+
+
+
+.order-header-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-direction: column;
+	padding: 1em 2em;
+	gap: 1em;
+
+	.table-header{
+		background-color: #ececec;
+	}
+
+	.table-column{
+		width: 40%;
+	}
+
+	.table-column:first-child{
+		width: 30%;
+	}
+
+	.table-cell-pending{
+		color: #FFA500;
+	}
+
+	.table-cell-confirmed{
+		color: #008000;
+	}
+
+}
