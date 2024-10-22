@@ -1,10 +1,14 @@
-# CatPic | Get Your Daily Dose of Feline Awesomeness!
+# 🛡️ Order Verification Platform
+
+This project is a simple Order Management Application built using React. The application allows users to manage orders, including editing order lines, validating them, and calculating the total amount of the order. The core focus is on dividing the application into reusable components, managing communication between them, and implementing state updates effectively.
 
 This project follows the same **Pod-based architecture model** as the previous one, making it easier to manage, scale, and maintain over time.
 
 The boilerplate is built with **Webpack** as the bundler, and comes with built-in support for **Material UI (MUI)**, **Sass**, and **CSS Modules**, ensuring a scalable and flexible foundation for styling your components. It's designed to be clean, efficient, and easily adaptable to different project needs.
 
-We will primarily focus on working with the **React context**, using a list of images.
+**LIVE DEMO:** https://catpic.netlify.app/
+
+<img src="public/readme/desktop-preview.png" alt="Desktop Preview" />
 
 ## Features
 
@@ -40,26 +44,13 @@ This will launch the app on **http://localhost:8080**. Open it in your browser, 
 
 The development server will automatically reload when you make changes to the code.
 
-## Store View Functionality
+## Key Functionality
 
-We have a main store view where the available images are displayed on the left and a shopping cart on the right. Each time the user selects an image on one of the pages, it is added to the cart. If a user removes an image from the cart, it is deselected from the page (if it is currently active).
+- **Editing Order Lines**: Users can directly edit the amount of an order line. When the amount is modified, the total amount of the order is recalculated in real-time.
 
-### Other Features Implemented:
+- **Validating Lines**: Each line can be marked as "validated" or "pending" using a checkbox. The order can only be submitted when all lines are validated.
 
-- We have enabled the cart to be shown and hidden.
-- We have added a category filtering option in the top menu.
-- We have included an option to empty the entire cart.
-- We have added an additional Checkout Page.
-- We have added floating notifications to inform the user when an image is added to the cart.
+- **Dynamic State Calculation**:
 
-![Desktop Preview](public/readme/desktop-preview.gif)
-
-## Mobile Design Adaptation
-
-In the mobile design, we've implemented an alternative method for hiding the cart, as the desktop approach was too intrusive for mobile users. To enhance the user experience, we've utilized a **Swipeable Drawer from MUI**, the library we've employed to style the entire application. This allows users to easily access the cart without interrupting their browsing experience, making it more convenient and intuitive for mobile users.
-
-**Attention! ⚠️** If you want to see all the features adapted for mobile, such as the sliding cart, it will not be enough to use your browser window. That's why I've prepared the following live demo for you to open it from your smartphone.
-
-**LIVE DEMO:** https://catpic.netlify.app/
-
-<img src="public/readme/mobile-preview.gif" alt="Mobile Preview" height="500" />
+- - The total amount is recalculated based on the updated prices of the lines.
+- - The validation state shows the percentage of lines that are validated.
