@@ -7,11 +7,14 @@ import {
 import classes from "./order-header.component.module.scss";
 import { OrderContext } from "@/provider/order.context";
 
-export const OrderHeaderComponent: React.FC = () => {
-	const { orderDetails } = useContext(OrderContext);
-	const validateOrder = (): boolean => {
-		return orderDetails.every((order) => order.status === true);
-	};
+interface OrderHeaderProps {
+	validateOrder: () => boolean;
+}
+
+export const OrderHeaderComponent: React.FC<OrderHeaderProps> = (props) => {
+	const { validateOrder } = props;
+	const { confirmOrder, orderNumber } = useContext(OrderContext);
+
 	return (
 		<Box className={classes.orderHeaderContainer}>
 			<Box className={classes.orderHeaderTitle}>
@@ -29,6 +32,7 @@ export const OrderHeaderComponent: React.FC = () => {
 				color="success"
 				disabled={!validateOrder()}
 				className={classes.validateButton}
+				onClick={() => confirmOrder(orderNumber)}
 			>
 				Validate Order
 			</Button>

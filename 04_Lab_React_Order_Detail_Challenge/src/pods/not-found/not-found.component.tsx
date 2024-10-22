@@ -17,10 +17,9 @@ export const NotFoundComponent: React.FC = () => {
 				className={classes.button}
 				component={Link}
 				to={switchRoutes.root}
-				variant="contained"
-				color="primary"
+				color="error"
 			>
-				Back to Shop
+				Back to Platform
 			</Button>
 		</Box>
 	);

@@ -28,22 +28,25 @@ export const getStatusPercentage = (orderDetails: OrderDetails[]): number => {
 	return Math.round((totalProductsConfirmed / totalProducts) * 100);
 }
 
-export const updatePrice = (orderDetails: OrderDetails[], newPrice: number, id: number): OrderDetails[] => {
-	const updatedOrderDetails = [...orderDetails];
-	updatedOrderDetails.map((orderDetail) => {
-		if (orderDetail.id === id) {
-			orderDetail.price = newPrice;
-		}
-	});
-	return updatedOrderDetails;
-}
+export const updatePrice = (
+	orderDetails: OrderDetails[],
+	newPrice: number,
+	id: number
+): OrderDetails[] => {
+	return orderDetails.map((orderDetail) =>
+		orderDetail.id === id
+			? { ...orderDetail, price: newPrice }
+			: orderDetail
+	);
+};
 
-export const updateStatus = (orderDetails: OrderDetails[], id: number): OrderDetails[] => {
-	const updatedOrderDetails = [...orderDetails];
-	updatedOrderDetails.map((orderDetail) => {
-		if (orderDetail.id === id) {
-			orderDetail.status = !orderDetail.status;
-		}
-	});
-	return updatedOrderDetails;
-}
+export const updateStatus = (
+	orderDetails: OrderDetails[],
+	id: number
+): OrderDetails[] => {
+	return orderDetails.map((orderDetail) =>
+		orderDetail.id === id
+			? { ...orderDetail, status: !orderDetail.status }
+			: orderDetail
+	);
+};

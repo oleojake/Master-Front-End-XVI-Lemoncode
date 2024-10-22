@@ -7,6 +7,7 @@ export interface OrderContextModel {
 	orderDetails: OrderDetails[];
 	updatePriceForOneProduct(price: number, id: number): void;
 	updateStatusForOneProduct(id: number): void;
+	confirmOrder(id: string): void;
 }
 
 export interface OrderDetails {
@@ -15,24 +16,3 @@ export interface OrderDetails {
 	price: number;
 	status: boolean;
 }
-
-export const mockOrderDetails: OrderDetails[] = [
-	{
-		id: 1,
-		description: "EcoFlex Pallet",
-		price: 50.25,
-		status: true,
-	},
-	{
-		id: 2,
-		description: "GreenShield Packaging Wrap",
-		price: 25.49,
-		status: false,
-	},
-	{
-		id: 3,
-		description: "NatureFlow Cargo Crates",
-		price: 150.99,
-		status: true,
-	},
-];

@@ -13,17 +13,9 @@ import {
 } from "@mui/material";
 import classes from "./details-table.component.module.scss";
 
-interface DetailsTableProps {
-	handlePriceChange: (
-		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-		id: number
-	) => void;
-	handleStatusChange: (id: number) => void;
-}
-
-export const DetailsTableComponent: React.FC<DetailsTableProps> = (props) => {
-	const { handlePriceChange, handleStatusChange } = props;
-	const { orderDetails } = useContext(OrderContext);
+export const DetailsTableComponent: React.FC = () => {
+	const { orderDetails, updatePriceForOneProduct, updateStatusForOneProduct } =
+		useContext(OrderContext);
 	return (
 		<TableContainer className={classes.orderHeaderContent}>
 			<Table>
@@ -43,14 +35,14 @@ export const DetailsTableComponent: React.FC<DetailsTableProps> = (props) => {
 										control={<Checkbox checked color="success" />}
 										label="Confirmed"
 										className={classes.tableCellConfirmed}
-										onChange={() => handleStatusChange(orderDetail.id)}
+										onChange={() => updateStatusForOneProduct(orderDetail.id)}
 									/>
 								) : (
 									<FormControlLabel
 										control={<Checkbox color="warning" />}
 										label="Pending"
 										className={classes.tableCellPending}
-										onChange={() => handleStatusChange(orderDetail.id)}
+										onChange={() => updateStatusForOneProduct(orderDetail.id)}
 									/>
 								)}
 							</TableCell>
@@ -62,7 +54,9 @@ export const DetailsTableComponent: React.FC<DetailsTableProps> = (props) => {
 									size="small"
 									type="number"
 									value={orderDetail.price}
-									onChange={(e) => handlePriceChange(e, orderDetail.id)}
+									onChange={(e) =>
+										updatePriceForOneProduct(Number(e.target.value), orderDetail.id)
+									}
 									disabled={orderDetail.status}
 								/>
 							</TableCell>
