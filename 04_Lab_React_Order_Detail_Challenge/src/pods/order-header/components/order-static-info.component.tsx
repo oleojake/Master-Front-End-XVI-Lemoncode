@@ -14,12 +14,20 @@ export const OrderStaticInfoComponent: React.FC = () => {
 				label="Order number"
 				value={orderNumber}
 				disabled
+				className={classes.input}
 			/>
-			<TextField variant="outlined" label="Supplier" value={supplier} disabled />
+			<TextField
+				variant="outlined"
+				label="Supplier"
+				value={supplier}
+				disabled
+				className={classes.input}
+			/>
 			<DatePicker
 				label="Creation date"
 				value={dayjs(date, "DD/MM/YYYY")}
 				disabled
+				className={classes.input}
 			/>
 		</Box>
 	);
