@@ -6,7 +6,7 @@ This project follows the same **Pod-based architecture model** as the previous o
 
 The boilerplate is built with **Webpack** as the bundler, and comes with built-in support for **Material UI (MUI)**, **Sass**, and **CSS Modules**, ensuring a scalable and flexible foundation for styling your components. It's designed to be clean, efficient, and easily adaptable to different project needs.
 
-**LIVE DEMO:** https://catpic.netlify.app/
+**LIVE DEMO:** https://order-verification-platform.netlify.app/
 
 <img src="public/readme/desktop-preview.png" alt="Desktop Preview" />
 
