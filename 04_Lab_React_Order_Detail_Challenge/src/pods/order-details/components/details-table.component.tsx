@@ -32,14 +32,24 @@ export const DetailsTableComponent: React.FC = () => {
 							<TableCell>
 								{orderDetail.status ? (
 									<FormControlLabel
-										control={<Checkbox checked color="success" />}
+										control={
+											<Checkbox
+												checked={orderDetail.status}
+												sx={{
+													color: "#022213",
+													"&.Mui-checked": {
+														color: "#ADDE34",
+													},
+												}}
+											/>
+										}
 										label="Confirmed"
 										className={classes.tableCellConfirmed}
 										onChange={() => updateStatusForOneProduct(orderDetail.id)}
 									/>
 								) : (
 									<FormControlLabel
-										control={<Checkbox color="warning" />}
+										control={<Checkbox checked={orderDetail.status} />}
 										label="Pending"
 										className={classes.tableCellPending}
 										onChange={() => updateStatusForOneProduct(orderDetail.id)}

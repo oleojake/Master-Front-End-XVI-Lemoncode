@@ -4,12 +4,14 @@
 	justify-content: space-between;
 	background-color: #FFFFFF;
 	width: 50vw;
+	border-radius: 20px;
 
 	.order-header-title {
 		font-size: 1.5rem;
 		background-color: #022213;
 		color: #FFFFFF;
 		padding: 0.2em 1em;
+		border-radius: 20px 20px 0 0;
 	}
 	
 	.order-header-content {
@@ -23,6 +25,9 @@
 	
 	.validate-button {
 		border-radius: 0;
+		color: #022213;
+		background-color: #ADDE34;
+		border-radius: 0 0 20px 20px;
 	}
 }
 
