@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the '04_lab_angular_basic' title`, () => {
+  it(`should have the '04-lab-basic-pod-architecture-angular' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('04_lab_angular_basic');
+    expect(app.title).toEqual('04-lab-basic-pod-architecture-angular');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, 04_lab_angular_basic');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, 04-lab-basic-pod-architecture-angular');
   });
 });

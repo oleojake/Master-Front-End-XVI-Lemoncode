@@ -6,8 +6,8 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = '04_lab_angular_basic';
+  title = '04-lab-basic-pod-architecture-angular';
 }
