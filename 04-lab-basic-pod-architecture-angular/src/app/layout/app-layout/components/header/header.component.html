@@ -1,0 +1,6 @@
+<app-public-header *ngIf="!loggedIn"></app-public-header>
+<app-private-header
+  *ngIf="loggedIn"
+  (logoutEvent)="logout()"
+  [loggedUsername]="loggedUsername"
+></app-private-header>
