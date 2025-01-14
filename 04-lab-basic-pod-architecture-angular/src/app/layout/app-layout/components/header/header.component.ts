@@ -23,7 +23,7 @@ export class HeaderComponent {
 
 	logout() {
 		this.authService.logout();
-		this.loggedIn = false;
+		this.loggedIn = this.authService.isLogged();
 	}
 
 }

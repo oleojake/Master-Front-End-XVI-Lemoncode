@@ -1,3 +1,18 @@
+.help-text{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 0.8rem;
+	background-color: #d3ce3570;
+	padding: 0.5rem 1rem;
+	border-radius: 0.3rem;
+	margin-bottom: 1rem;
+}
+
+.help-text p {
+  margin: 0;
+}
+
 h1{
 	font-size: 2rem;
 	text-align: center;

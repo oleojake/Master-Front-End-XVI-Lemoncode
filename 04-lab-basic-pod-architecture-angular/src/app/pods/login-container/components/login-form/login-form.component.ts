@@ -5,19 +5,20 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { MatButton } from '@angular/material/button';
 import { User } from '../../../../model';
+import { NgIf } from '@angular/common';
 
 
 
 @Component({
 	selector: 'app-login-form',
 	standalone: true,
-	imports: [MatCardModule, MatInputModule, MatFormFieldModule, FormsModule, MatButton],
+	imports: [MatCardModule, MatInputModule, MatFormFieldModule, FormsModule, MatButton, NgIf],
 	templateUrl: './login-form.component.html',
 	styleUrl: './login-form.component.scss'
 })
 export class LoginFormComponent {
 
-	userSubmitted: User = { username: 'master@lemoncode.net', password: '12345678' };
+	userSubmitted: User = { username: '', password: '' };
 
 	constructor() { }
 

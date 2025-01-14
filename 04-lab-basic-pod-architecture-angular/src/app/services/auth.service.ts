@@ -5,13 +5,19 @@ import { User } from '../model';
 	providedIn: 'root'
 })
 export class AuthService {
-	private user: User = { username: '', password: '' };
+	private user: User | null = null;
 
-	constructor() { }
+	constructor() {
+		const storedUser = localStorage.getItem('user');
+		if (storedUser) {
+			this.user = JSON.parse(storedUser);
+		}
+	}
 
 	public login(user: User): boolean {
 		if (user.username === 'master@lemoncode.net' && user.password === '12345678') {
 			this.user = user;
+			localStorage.setItem('user', JSON.stringify(this.user));
 			console.log('User logged in');
 			console.log(this.user);
 			return true;
@@ -23,17 +29,18 @@ export class AuthService {
 	}
 
 	public logout(): void {
-		this.user = { username: '', password: '' };
+		this.user = null;
+		localStorage.removeItem('user');
 		console.log('User logged out');
 		console.log(this.user);
 	}
 
 	public isLogged(): boolean {
-		return this.user.username !== '';
+		return this.user !== null;
 	}
 
 	public getUsename(): string {
-		console.log(this.user.username);
-		return this.user.username;
+		console.log(this.user?.username);
+		return this.user ? this.user.username : '';
 	}
 }
