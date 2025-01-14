@@ -1,33 +1,60 @@
-<img
-  [src]="galleryItems[0].path"
-  [alt]="galleryItems[0].title"
-  class="selected-image"
-/>
-<mat-progress-bar mode="determinate" value="10"></mat-progress-bar>
+<div class="image-container">
+  <img
+    [src]="selectedImage.path"
+    [alt]="selectedImage.title"
+    class="selected-image"
+    appZoomable
+    #zoomable="appZoomable"
+  />
+  <p class="zoom-status">
+    Zoom: {{ (zoomable.getZoomState() * 100).toFixed(0) }} %
+  </p>
+</div>
+
+<mat-progress-bar
+  mode="determinate"
+  [value]="((selectedImageIndex + 1) * 100) / galleryItems.length"
+></mat-progress-bar>
 
 <div class="gallery-thumbnails">
-  <ng-container *ngFor="let item of galleryItems">
-    <img [src]="item.path" [alt]="item.title" />
+  <ng-container *ngFor="let item of galleryItems; let i = index">
+    <img [src]="item.path" [alt]="item.title" (click)="selectImage(i)" />
   </ng-container>
 </div>
 
 <div class="buttons-panel">
-  <button mat-raised-button color="primary">
+  <button
+    mat-raised-button
+    (click)="previousImage()"
+    [disabled]="isFirstImageSelected()"
+  >
     <mat-icon>arrow_backward</mat-icon>
   </button>
-  <button mat-raised-button color="primary">
+  <button
+    mat-raised-button
+    (click)="nextImage()"
+    [disabled]="isLastImageSelected()"
+  >
     <mat-icon>arrow_forward</mat-icon>
   </button>
-  <button mat-raised-button color="primary">
+  <button
+    mat-raised-button
+    (click)="zoomable.zoomIn()"
+    [disabled]="zoomable.cannotZoomIn()"
+  >
     <mat-icon>zoom_in</mat-icon>
   </button>
-  <button mat-raised-button color="primary">
+  <button
+    mat-raised-button
+    (click)="zoomable.zoomOut()"
+    [disabled]="zoomable.cannotZoomOut()"
+  >
     <mat-icon>zoom_out</mat-icon>
   </button>
-  <button mat-raised-button color="primary">
+  <button mat-raised-button (click)="play()" [disabled]="isPlaying">
     <mat-icon>play_arrow</mat-icon>
   </button>
-  <button mat-raised-button color="primary">
+  <button mat-raised-button (click)="stop()" [disabled]="!isPlaying">
     <mat-icon>stop</mat-icon>
   </button>
 </div>
