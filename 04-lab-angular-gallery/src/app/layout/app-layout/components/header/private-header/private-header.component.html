@@ -1,0 +1,30 @@
+<header>
+  <mat-toolbar>
+    <div>
+      <div routerLink="/" class="clickable" aria-label="Home">
+        <mat-icon>home</mat-icon>
+        <span>Pods Architecture Example</span>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <a mat-button routerLink="/dashboard" routerLinkActive="selected"
+        >Dashboard</a
+      >
+      <a mat-button routerLink="/gallery" routerLinkActive="selected"
+        >Gallery</a
+      >
+      <a mat-button routerLink="/crud" routerLinkActive="selected">CRUD</a>
+      <a mat-button routerLink="/profile" routerLinkActive="selected"
+        >Profile</a
+      >
+      <span>Hello, {{ loggedUsername }}</span>
+      <a
+        mat-flat-button
+        routerLink="/profile"
+        routerLinkActive="selected"
+        (click)="onLogout()"
+        ><mat-icon>logout</mat-icon>Logout</a
+      >
+    </nav>
+  </mat-toolbar>
+</header>

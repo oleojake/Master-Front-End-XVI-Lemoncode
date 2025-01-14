@@ -1,0 +1,42 @@
+<div class="help-text">
+  <p>Username: master&#64;lemoncode.net</p>
+  <p>Password: 12345678</p>
+</div>
+<h1>Login Form</h1>
+<form class="example-form" (ngSubmit)="onFormSubmit()" #loginForm="ngForm">
+  <mat-form-field class="example-full-width">
+    <mat-label>Username</mat-label>
+    <input
+      matInput
+      placeholder="Username"
+      name="username"
+      [(ngModel)]="userSubmitted.username"
+      required
+      email
+      #username="ngModel"
+    />
+    <mat-error *ngIf="username.invalid && username.touched">
+      <span *ngIf="username.errors?.['required']">Username is required</span>
+      <span *ngIf="username.errors?.['email']"
+        >Please enter a valid email address user&#64;example.com</span
+      >
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Password</mat-label>
+    <input
+      matInput
+      placeholder="Password"
+      name="password"
+      [(ngModel)]="userSubmitted.password"
+      required
+      minlength="8"
+      #password="ngModel"
+    />
+    <mat-error *ngIf="password.invalid && password.touched">
+      Password is required and must be at least 8 characters
+    </mat-error>
+  </mat-form-field>
+  <button mat-flat-button [disabled]="loginForm.invalid">Login</button>
+</form>

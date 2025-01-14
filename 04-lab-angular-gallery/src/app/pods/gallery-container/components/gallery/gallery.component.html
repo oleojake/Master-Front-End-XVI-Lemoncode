@@ -1,0 +1,33 @@
+<img
+  [src]="galleryItems[0].path"
+  [alt]="galleryItems[0].title"
+  class="selected-image"
+/>
+<mat-progress-bar mode="determinate" value="10"></mat-progress-bar>
+
+<div class="gallery-thumbnails">
+  <ng-container *ngFor="let item of galleryItems">
+    <img [src]="item.path" [alt]="item.title" />
+  </ng-container>
+</div>
+
+<div class="buttons-panel">
+  <button mat-raised-button color="primary">
+    <mat-icon>arrow_backward</mat-icon>
+  </button>
+  <button mat-raised-button color="primary">
+    <mat-icon>arrow_forward</mat-icon>
+  </button>
+  <button mat-raised-button color="primary">
+    <mat-icon>zoom_in</mat-icon>
+  </button>
+  <button mat-raised-button color="primary">
+    <mat-icon>zoom_out</mat-icon>
+  </button>
+  <button mat-raised-button color="primary">
+    <mat-icon>play_arrow</mat-icon>
+  </button>
+  <button mat-raised-button color="primary">
+    <mat-icon>stop</mat-icon>
+  </button>
+</div>
