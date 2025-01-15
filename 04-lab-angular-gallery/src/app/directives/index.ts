@@ -1,2 +1,2 @@
-export * from './highlight-thumbnail.directive';
-export * from './zoomable.directive';
+export * from './highlight-thumbnail/highlight-thumbnail.directive';
+export * from './zoomable/zoomable.directive';

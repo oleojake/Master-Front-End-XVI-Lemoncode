@@ -1,0 +1,14 @@
+h1{
+	font-size: 2rem;
+}
+
+.images-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 4rem;
+}
+
+.images-container > div > img {
+	max-width: 400px;
+}

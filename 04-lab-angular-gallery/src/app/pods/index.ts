@@ -5,3 +5,4 @@ export * from './login-container/login-container.component';
 export * from './dashboard-container/dashboard-container.component';
 export * from './gallery-container/gallery-container.component';
 export * from './profile-container/profile-container.component';
+export * from './rotate-container/rotate-container.component';

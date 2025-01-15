@@ -6,3 +6,4 @@ export * from './gallery-scene/gallery-scene.component';
 export * from './gallery-scene/gallery-scene.component';
 export * from './crud-scene/crud-scene.component';
 export * from './profile-scene/profile-scene.component';
+export * from './rotate-scene/rotate-scene.component';

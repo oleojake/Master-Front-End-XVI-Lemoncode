@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { HomeSceneComponent, AboutSceneComponent, LoginSceneComponent, DashboardSceneComponent, GallerySceneComponent, CrudSceneComponent, ProfileSceneComponent } from './scenes/';
+import { HomeSceneComponent, AboutSceneComponent, LoginSceneComponent, DashboardSceneComponent, GallerySceneComponent, CrudSceneComponent, ProfileSceneComponent, RotateSceneComponent } from './scenes/';
 
 export const routes: Routes = [
 	{ path: '', component: HomeSceneComponent },
@@ -8,5 +8,6 @@ export const routes: Routes = [
 	{ path: 'dashboard', component: DashboardSceneComponent },
 	{ path: 'gallery', component: GallerySceneComponent },
 	{ path: 'crud', component: CrudSceneComponent },
-	{ path: 'profile', component: ProfileSceneComponent }
+	{ path: 'profile', component: ProfileSceneComponent },
+	{ path: 'rotate', component: RotateSceneComponent }
 ];
