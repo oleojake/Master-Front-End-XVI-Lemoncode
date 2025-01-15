@@ -22,13 +22,15 @@
 .gallery-thumbnails {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	gap: 10px;
 }
 
 .gallery-thumbnails > img {
-	width: 50px;
+	width: 75px;
 	height: auto;
 	cursor: pointer;
+	transition: transform 0.3s ease;
 }
 
 .buttons-panel{
@@ -36,6 +38,16 @@
 	gap: 10px;
 }
 
-.buttons-panel > button{
+.icon-button {
 	padding-right: 10px;
+}
+
+.highlight {
+	border: 3px solid #BF1469;
+  transform: scale(1.1);
+}
+
+.pagination {
+	padding: 0px!important;
+	margin: 0px!important;
 }

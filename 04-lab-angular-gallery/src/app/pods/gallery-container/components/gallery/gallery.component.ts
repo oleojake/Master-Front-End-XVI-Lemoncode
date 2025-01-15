@@ -1,22 +1,24 @@
 import { Component } from '@angular/core';
 import { GalleryService } from '../../../../services';
 import { GalleryImage } from '../../../../model';
-import { NgFor, SlicePipe } from '@angular/common';
+import { NgFor, NgIf, SlicePipe } from '@angular/common';
 import { MatProgressBar } from '@angular/material/progress-bar';
 import { MatButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 import { ZoomableDirective } from '../../../../directives/zoomable.directive';
+import { HighlightThumbnailDirective } from '../../../../directives/highlight-thumbnail.directive';
 
 
 @Component({
 	selector: 'app-gallery',
 	standalone: true,
-	imports: [NgFor, MatProgressBar, MatButton, MatIcon, ZoomableDirective, SlicePipe],
+	imports: [NgFor, MatProgressBar, MatButton, MatIcon, ZoomableDirective, HighlightThumbnailDirective, SlicePipe, NgIf],
 	templateUrl: './gallery.component.html',
 	styleUrl: './gallery.component.scss'
 })
 export class GalleryComponent {
 
+	readonly ITEMS_PER_PAGE = 3;
 	galleryItems: GalleryImage[];
 	selectedImage: GalleryImage;
 	selectedImageIndex: number;
@@ -75,4 +77,42 @@ export class GalleryComponent {
 		clearInterval(this.startInterval);
 	}
 
+	isSelected(index: number): boolean {
+		return this.selectedImageIndex === index;
+	}
+
+	calculateSlicePipeStart(): number {
+		const pageIndex = Math.floor(this.selectedImageIndex / this.ITEMS_PER_PAGE);
+		return pageIndex * this.ITEMS_PER_PAGE;
+	}
+
+	calculateSlicePipeEnd(): number {
+		return this.calculateSlicePipeStart() + this.ITEMS_PER_PAGE;
+	}
+
+	nextPage(): void {
+		const currentPage = Math.floor(this.selectedImageIndex / this.ITEMS_PER_PAGE);
+		const nextPageStart = (currentPage + 1) * this.ITEMS_PER_PAGE;
+
+		if (nextPageStart < this.galleryItems.length) {
+			this.selectImage(nextPageStart);
+		}
+	}
+
+	previousPage(): void {
+		const currentPage = Math.floor(this.selectedImageIndex / this.ITEMS_PER_PAGE);
+		const previousPageStart = (currentPage - 1) * this.ITEMS_PER_PAGE;
+
+		if (previousPageStart >= 0) {
+			this.selectImage(previousPageStart);
+		}
+	}
+
+	getPageNumber(): number {
+		return Math.floor(this.selectedImageIndex / this.ITEMS_PER_PAGE) + 1;
+	}
+
+	getTotalPages(): number {
+		return Math.ceil(this.galleryItems.length / this.ITEMS_PER_PAGE);
+	}
 }

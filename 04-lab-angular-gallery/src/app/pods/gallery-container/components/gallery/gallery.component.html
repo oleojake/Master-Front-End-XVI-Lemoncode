@@ -17,28 +17,50 @@
 ></mat-progress-bar>
 
 <div class="gallery-thumbnails">
-  <ng-container *ngFor="let item of galleryItems; let i = index">
-    <img [src]="item.path" [alt]="item.title" (click)="selectImage(i)" />
-  </ng-container>
-</div>
-
-<div class="buttons-panel">
   <button
-    mat-raised-button
+    mat-flat-button
+    class="icon-button"
     (click)="previousImage()"
     [disabled]="isFirstImageSelected()"
   >
     <mat-icon>arrow_backward</mat-icon>
   </button>
+  <ng-container
+    *ngFor="
+      let item of galleryItems
+        | slice : calculateSlicePipeStart() : calculateSlicePipeEnd();
+      let i = index
+    "
+  >
+    <img
+      [src]="item.path"
+      [alt]="item.title"
+      (click)="selectImage(i)"
+      [appHighlightThumbnail]="isSelected(calculateSlicePipeStart() + i)"
+    />
+  </ng-container>
   <button
-    mat-raised-button
+    mat-flat-button
+    class="icon-button"
     (click)="nextImage()"
     [disabled]="isLastImageSelected()"
   >
     <mat-icon>arrow_forward</mat-icon>
   </button>
+</div>
+
+<div class="buttons-panel">
   <button
     mat-raised-button
+    class="text-button"
+    (click)="previousPage()"
+    [disabled]="getPageNumber() === 1"
+  >
+    Prev Page
+  </button>
+  <button
+    mat-raised-button
+    class="icon-button"
     (click)="zoomable.zoomIn()"
     [disabled]="zoomable.cannotZoomIn()"
   >
@@ -46,15 +68,35 @@
   </button>
   <button
     mat-raised-button
+    class="icon-button"
     (click)="zoomable.zoomOut()"
     [disabled]="zoomable.cannotZoomOut()"
   >
     <mat-icon>zoom_out</mat-icon>
   </button>
-  <button mat-raised-button (click)="play()" [disabled]="isPlaying">
+  <button
+    mat-raised-button
+    class="icon-button"
+    (click)="play()"
+    *ngIf="!isPlaying"
+  >
     <mat-icon>play_arrow</mat-icon>
   </button>
-  <button mat-raised-button (click)="stop()" [disabled]="!isPlaying">
+  <button
+    mat-raised-button
+    class="icon-button"
+    (click)="stop()"
+    *ngIf="isPlaying"
+  >
     <mat-icon>stop</mat-icon>
   </button>
+  <button
+    mat-raised-button
+    class="text-button"
+    (click)="nextPage()"
+    [disabled]="getPageNumber() === getTotalPages()"
+  >
+    Next Page
+  </button>
 </div>
+<p class="pagination">Page {{ getPageNumber() }} / {{ getTotalPages() }}</p>
