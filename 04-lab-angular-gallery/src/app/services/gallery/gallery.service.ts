@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
-import { GalleryImage } from '../../model';
+import { GalleryImage } from '@model/index';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
 	providedIn: 'root'
 })
 export class GalleryService {
 
-	galleryIems: GalleryImage[] = [
+	galleryItems: GalleryImage[] = [
 		{
 			id: 1,
 			path: '/gallery-images/landscape-1.jpg',
@@ -51,7 +52,7 @@ export class GalleryService {
 
 	constructor() { }
 
-	getGalleryImages(): GalleryImage[] {
-		return this.galleryIems;
+	getGalleryImages(): Observable<GalleryImage[]> {
+		return of(this.galleryItems);
 	}
 }

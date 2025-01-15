@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { PublicHeaderComponent } from './public-header/public-header.component';
-import { PrivateHeaderComponent } from './private-header/private-header.component';
+import { PublicHeaderComponent, PrivateHeaderComponent } from './components/index';
 import { NgIf } from '@angular/common';
-import { AuthService } from '../../../../services/auth/auth.service';
+import { AuthService } from '@services/auth/auth.service';
 
 @Component({
 	selector: 'app-header',

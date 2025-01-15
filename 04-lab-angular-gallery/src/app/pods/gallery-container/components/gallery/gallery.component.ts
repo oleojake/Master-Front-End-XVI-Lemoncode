@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
-import { GalleryService } from '../../../../services';
-import { GalleryImage } from '../../../../model';
+import { GalleryService } from '@services/gallery/gallery.service';
+import { GalleryImage } from '@model/index';
 import { NgFor, NgIf, SlicePipe } from '@angular/common';
 import { MatProgressBar } from '@angular/material/progress-bar';
 import { MatButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
-import { ZoomableDirective } from '../../../../directives/zoomable.directive';
-import { HighlightThumbnailDirective } from '../../../../directives/highlight-thumbnail.directive';
-
+import { ZoomableDirective, HighlightThumbnailDirective } from '@directives/index';
 
 @Component({
 	selector: 'app-gallery',
@@ -26,8 +24,12 @@ export class GalleryComponent {
 	isPlaying: boolean;
 
 	constructor(private GalleryService: GalleryService) {
-		this.galleryItems = this.GalleryService.getGalleryImages();
-		this.selectedImage = this.galleryItems[0];
+		this.galleryItems = [];
+		this.selectedImage = { id: 0, path: '', title: '' };
+		this.GalleryService.getGalleryImages().subscribe((images) => {
+			this.galleryItems = images;
+			this.selectedImage = images[0];
+		});
 		this.selectedImageIndex = 0;
 		this.isPlaying = false;
 	}

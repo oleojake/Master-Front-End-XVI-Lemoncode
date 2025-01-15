@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AppLayoutComponent } from "../../layout/app-layout/app-layout.component";
-import { GalleryContainerComponent } from "../../pods/gallery-container/gallery-container.component";
+import { AppLayoutComponent } from "@layout/app-layout/app-layout.component";
+import { GalleryContainerComponent } from "@pods/gallery-container/gallery-container.component";
 
 @Component({
 	selector: 'app-gallery-scene',

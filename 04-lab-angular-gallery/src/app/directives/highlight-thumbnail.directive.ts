@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Input, Renderer2, OnChanges } from '@angular/core';
+import { Directive, ElementRef, Input, OnChanges } from '@angular/core';
 
 @Directive({
 	selector: '[appHighlightThumbnail]',

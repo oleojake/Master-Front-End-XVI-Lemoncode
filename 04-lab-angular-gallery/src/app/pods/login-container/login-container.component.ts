@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { LoginFormComponent } from './components/login-form/login-form.component';
-import { AuthService } from '../../services/auth/auth.service';
+import { LoginFormComponent } from './components/index';
+import { AuthService } from '@services/auth/auth.service';
 import { Router } from '@angular/router';
-import { User } from '../../model';
+import { User } from '@model/index';
 
 @Component({
 	selector: 'app-login-container',

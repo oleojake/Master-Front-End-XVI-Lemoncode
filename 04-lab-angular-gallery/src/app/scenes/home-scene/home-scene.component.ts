@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { HomeContainerComponent } from "../../pods/home-container/home-container.component";
-import { AppLayoutComponent } from "../../layout/app-layout/app-layout.component";
+import { HomeContainerComponent } from "@pods/home-container/home-container.component";
+import { AppLayoutComponent } from "@layout/app-layout/app-layout.component";
 
 @Component({
 	selector: 'app-home-scene',

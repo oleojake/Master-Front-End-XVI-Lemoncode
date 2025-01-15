@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AppLayoutComponent } from "../../layout/app-layout/app-layout.component";
-import { ProfileContainerComponent } from "../../pods/profile-container/profile-container.component";
+import { AppLayoutComponent } from "@layout/app-layout/app-layout.component";
+import { ProfileContainerComponent } from "@pods/profile-container/profile-container.component";
 
 @Component({
 	selector: 'app-profile-scene',
