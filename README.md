@@ -16,4 +16,8 @@
 
 #### ✔️ Laboratorio Módulo 4.2 - React Context ([📁src](/04_Lab_React_Context))
 
-#### ✔️ Laboratorio Módulo 3.2 - Bundle Order Validation Platform ([📁src](/04_Lab_React_Order_Detail_Challenge))
+#### ✔️ Laboratorio Módulo 4.3 - Bundle Order Validation Platform ([📁src](/04_Lab_React_Order_Detail_Challenge))
+
+#### ✔️ Laboratorio Módulo 4.4 - Angular Architecture ([📁src](/04-lab-basic-pod-architecture-angular))
+
+#### ✔️ Laboratorio Módulo 4.5 - Angular Gallery ([📁src](/04-lab-angular-gallery))
