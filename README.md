@@ -22,4 +22,4 @@
 
 #### ✔️ Laboratorio Módulo 4.5 - Angular Gallery ([📁src](/04-lab-angular-gallery))
 
-#### ✔️ Laboratorio Módulo 5 - Testing ([📁src](/https://github.com/oleojake/05-testing-lab))
+#### ✔️ Laboratorio Módulo 5 - Testing ([📁src](https://github.com/oleojake/05-testing-lab))
