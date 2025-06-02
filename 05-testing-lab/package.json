@@ -13,10 +13,10 @@
     "postinstall": "cd ./server && npm install",
     "test": "vitest -c ./config/test/config.ts",
     "test:watch": "vitest",
-    "test:e2e": "start-server-and-test start:dev http://localhost:8080 cypress:open",
-    "cypress:open": "cypress open",
-    "test:e2e:ci": "start-server-and-test start:dev http://localhost:8080 cypress:ci",
-    "cypress:ci": "cypress run"
+    "test:e2e:ci": "npm start -- -r start:e2e:ci",
+    "start:e2e:ci": "cypress run",
+    "test:e2e": "npm start -- -r start:e2e",
+    "start:e2e": "cypress open"
   },
   "imports": {
     "#*": "./src/*"
