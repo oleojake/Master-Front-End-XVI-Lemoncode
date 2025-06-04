@@ -9,7 +9,6 @@ export const useCharacterCollection = () => {
 		[]
 	);
 
-	// Llamar a la API, falta el mapper
 	const loadCharacterCollection = () => {
 		getCharacterCollection().then((result) =>
 			setCharacterCollection(mapToCollection(result, mapFromApiToVm))
