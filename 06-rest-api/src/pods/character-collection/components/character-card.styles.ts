@@ -11,7 +11,7 @@ export const classes = {
   `,
 	media: css`
     height: 0;
-    padding-top: 100%; // Cuadrado
+    padding-top: 100%;
     background-size: cover;
     background-position: center;
   `,
