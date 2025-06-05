@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { AppLayout } from '#layouts';
+import { CharacterContainer } from '#pods/character';
 
 export const CharacterScene = () => (
   <AppLayout>
-    <p>Character Container</p>
+    <CharacterContainer />
   </AppLayout>
 );

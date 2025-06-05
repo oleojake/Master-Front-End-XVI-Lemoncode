@@ -20,7 +20,7 @@ export const RouterComponent: React.FunctionComponent = () => {
         <Route path={switchRoutes.editHotel} element={<HotelScene />} />
         <Route
           path={switchRoutes.root}
-          element={<Navigate to={switchRoutes.hotelCollection} />}
+          element={<Navigate to={switchRoutes.characterCollection} />}
         />
         <Route
           path={switchRoutes.characterCollection}
