@@ -15,7 +15,7 @@ let db = {
 
 const app = new Hono();
 app.use(logger());
-app.use('/api/*', cors());
+app.use(cors());
 
 app.get('/api/character', async (context) => {
 	const response: CharacterListResponse = {
