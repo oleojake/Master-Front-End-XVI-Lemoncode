@@ -14,6 +14,10 @@ interface Props {
 export const CharacterComponent: React.FunctionComponent<Props> = (props) => {
   const { character, onSave } = props;
 
+  if (!character) {
+    return <div>Character not found</div>;
+  }
+
   return (
     <Formik
       onSubmit={onSave}
